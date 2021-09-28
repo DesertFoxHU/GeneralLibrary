@@ -1,4 +1,0 @@
-name: GCL
-version: ${project.version}
-main: me.desertfox.gcl.GCL
-api-version: 1.17
