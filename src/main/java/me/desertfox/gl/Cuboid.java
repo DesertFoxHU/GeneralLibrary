@@ -15,6 +15,16 @@ public class Cuboid implements Iterable<Block>, Cloneable, ConfigurationSerializ
         protected final int x1, y1, z1;
         protected final int x2, y2, z2;
 
+        /* START - DESERTFOX */
+        public Block getFirstNotAirBlock(){
+                for(Block block : getBlocks()){
+                        if(block.getType() != Material.AIR){
+                                return block;
+                        }
+                }
+                return null;
+        }
+
         public Location getLocation1(){
                 return new Location(Bukkit.getWorld(worldName), x1, y1, z1);
         }
@@ -22,6 +32,7 @@ public class Cuboid implements Iterable<Block>, Cloneable, ConfigurationSerializ
         public Location getLocation2(){
                 return new Location(Bukkit.getWorld(worldName), x2, y2, z2);
         }
+        /* END - DESERTFOX*/
 
         /**
          * Construct a Cuboid given two Location objects which represent any two corners of the Cuboid.
