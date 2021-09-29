@@ -8,5 +8,5 @@ The library contains the following things:<br>
 - Converting Locations to readable string vica-versa
 - Serializator
 
-[![Release](https://jitpack.io/v/User/Repo.svg)]
+[![Release](https://jitpack.io/v/DesertFoxHU/GeneralLibrary.svg)]
 (https://jitpack.io/#DesertFoxHU/GeneralLibrary)
