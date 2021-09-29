@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 import java.util.HashMap;
 
-public class Commands {
+public class Region {
 
     public static HashMap<Player, LocationStorage> locationStorage = new HashMap<>();
 
