@@ -1,3 +1,6 @@
+
+![Release](https://jitpack.io/v/DesertFoxHU/GeneralLibrary.svg)
+
 # GeneralLibrary
 
 The library contains the following things:<br>
@@ -7,6 +10,3 @@ The library contains the following things:<br>
 - Formatting doubles
 - Converting Locations to readable string vica-versa
 - Serializator
-
-[![Release](https://jitpack.io/v/DesertFoxHU/GeneralLibrary.svg)]
-(https://jitpack.io/#DesertFoxHU/GeneralLibrary)
