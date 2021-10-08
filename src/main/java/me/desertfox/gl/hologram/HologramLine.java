@@ -19,6 +19,7 @@ public class HologramLine {
         armorStand.setCollidable(false);
         armorStand.setCustomName(line);
         armorStand.setCustomNameVisible(true);
+        armorStand.setMarker(true);
     }
 
     public void remove(){

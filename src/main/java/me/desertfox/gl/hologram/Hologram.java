@@ -55,6 +55,10 @@ public class Hologram {
         }
     }
 
+    public void removeLine(int index){
+        getLine(index).remove();
+    }
+
     public HologramLine getLine(int index){
         try{
             return lines.get(index);
