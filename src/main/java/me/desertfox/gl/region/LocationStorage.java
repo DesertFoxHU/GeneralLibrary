@@ -1,6 +1,5 @@
 package me.desertfox.gl.region;
 
-import me.desertfox.gl.region.Cuboid;
 import org.bukkit.Location;
 
 public class LocationStorage {

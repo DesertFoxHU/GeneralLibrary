@@ -8,14 +8,13 @@ import org.bukkit.configuration.serialization.ConfigurationSerializable;
  
 /**
  * This class is a region/cuboid from one location to another. It can be used for blocks protection and things like WorldEdit.
- * @author desht (Original code), KingFaris10 (Editor of code)
+ * @author desht (Original code), KingFaris10, DesertFoxHU (Editor of code)
  */
 public class Cuboid implements Iterable<Block>, Cloneable, ConfigurationSerializable {
         protected final String worldName;
         protected final int x1, y1, z1;
         protected final int x2, y2, z2;
 
-        /* START - DESERTFOX */
         public Block getFirstNotAirBlock(){
                 for(Block block : getBlocks()){
                         if(block.getType() != Material.AIR){
@@ -32,7 +31,6 @@ public class Cuboid implements Iterable<Block>, Cloneable, ConfigurationSerializ
         public Location getLocation2(){
                 return new Location(Bukkit.getWorld(worldName), x2, y2, z2);
         }
-        /* END - DESERTFOX*/
 
         /**
          * Construct a Cuboid given two Location objects which represent any two corners of the Cuboid.

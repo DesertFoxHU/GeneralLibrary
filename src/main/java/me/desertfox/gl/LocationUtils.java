@@ -7,9 +7,9 @@ import org.bukkit.World;
 public class LocationUtils {
 
     /**
-     * See Formatter.formatDouble
+     * See {@link Formatter#formatDouble(double, int)}
      * @param location
-     * @param length
+     * @param length coordinates max length
      * @return
      */
     public static Location formatLocation(Location location, int length){
@@ -53,12 +53,12 @@ public class LocationUtils {
 
         String[] splitted = input.split(" ");
 
-        double X = Double.valueOf(splitted[1]);
-        double Y = Double.valueOf(splitted[2]);
-        double Z = Double.valueOf(splitted[3]);
+        double X = Double.parseDouble(splitted[1]);
+        double Y = Double.parseDouble(splitted[2]);
+        double Z = Double.parseDouble(splitted[3]);
         if(splitted.length > 4) {
-            float yaw = Float.valueOf(splitted[4]);
-            float pitch = Float.valueOf(splitted[5]);
+            float yaw = Float.parseFloat(splitted[4]);
+            float pitch = Float.parseFloat(splitted[5]);
             return new Location(Bukkit.getWorld(splitted[0]), X, Y, Z, yaw, pitch);
         }
 
@@ -70,12 +70,12 @@ public class LocationUtils {
 
         String[] splitted = input.split(" ");
 
-        double X = Double.valueOf(splitted[0]);
-        double Y = Double.valueOf(splitted[1]);
-        double Z = Double.valueOf(splitted[2]);
+        double X = Double.parseDouble(splitted[0]);
+        double Y = Double.parseDouble(splitted[1]);
+        double Z = Double.parseDouble(splitted[2]);
         if(splitted.length > 3) {
-            float yaw = Float.valueOf(splitted[5]);
-            float pitch = Float.valueOf(splitted[4]);
+            float yaw = Float.parseFloat(splitted[5]);
+            float pitch = Float.parseFloat(splitted[4]);
             return new Location(world, X, Y, Z, yaw, pitch);
         }
 
@@ -87,9 +87,9 @@ public class LocationUtils {
 
         String[] splitted = input.split(" ");
 
-        double X = Double.valueOf(splitted[1]);
-        double Y = Double.valueOf(splitted[2]);
-        double Z = Double.valueOf(splitted[3]);
+        double X = Double.parseDouble(splitted[1]);
+        double Y = Double.parseDouble(splitted[2]);
+        double Z = Double.parseDouble(splitted[3]);
 
         return new Location(Bukkit.getWorld(splitted[0]), X, Y, Z);
     }
@@ -99,9 +99,9 @@ public class LocationUtils {
 
         String[] splitted = input.split(" ");
 
-        double X = Double.valueOf(splitted[0]);
-        double Y = Double.valueOf(splitted[1]);
-        double Z = Double.valueOf(splitted[2]);
+        double X = Double.parseDouble(splitted[0]);
+        double Y = Double.parseDouble(splitted[1]);
+        double Z = Double.parseDouble(splitted[2]);
 
         return new Location(world, X, Y, Z);
     }
