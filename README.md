@@ -4,9 +4,9 @@
 # GeneralLibrary
 
 The library contains the following things:<br>
-- Rolling with chance
-- Support for region picking
+- Chance rolling
+- Region picking like WorldEdit
 - Region handling (Cuboid)
 - Formatting doubles
-- Converting Locations to readable string vica-versa
+- Converting Locations to readable string and vica-versa
 - Serializator
