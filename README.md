@@ -1,5 +1,4 @@
-
-![Release](https://jitpack.io/v/DesertFoxHU/GeneralLibrary.svg)
+[![](https://jitpack.io/v/DesertFoxHU/GeneralLibrary.svg)](https://jitpack.io/#DesertFoxHU/GeneralLibrary)
 
 # GeneralLibrary
 
