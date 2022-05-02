@@ -11,7 +11,7 @@ public class Translator {
     public static String prefix = "";
 
     /**
-     * Enum should cointain language names like:<br>
+     * Enum should contain language names like:<br>
      * - EN<br>
      * - HU<br>
      * - RO<br>
@@ -21,6 +21,35 @@ public class Translator {
      */
     public static void Init(List<TranslationSource<?>> localeProvider){
         Translator.localeProvider = localeProvider;
+    }
+
+    /**
+     * Enum should contain language names like:<br>
+     * - EN<br>
+     * - HU<br>
+     * - RO<br>
+     * - EGY<br>
+     * etc.
+     * @param localeProvider
+     */
+    public static void Init(List<TranslationSource<?>> localeProvider, Enum<?> defaultLocale){
+        Translator.localeProvider = localeProvider;
+        Translator.defaultLocale = defaultLocale;
+    }
+
+    /**
+     * Enum should contain language names like:<br>
+     * - EN<br>
+     * - HU<br>
+     * - RO<br>
+     * - EGY<br>
+     * etc.
+     * @param localeProvider
+     */
+    public static void Init(List<TranslationSource<?>> localeProvider, Enum<?> defaultLocale, String prefix){
+        Translator.localeProvider = localeProvider;
+        Translator.defaultLocale = defaultLocale;
+        Translator.prefix = prefix;
     }
 
     /**
