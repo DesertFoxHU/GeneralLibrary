@@ -3,6 +3,10 @@ package me.desertfox.gl;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+/**
+ * If you have Manifold you can also use<br>
+ * {@link GeneralLibrary.extensions.org.bukkit.inventory.Inventory.InventoryExtensions}
+ */
 public class InventoryUtils {
 
     /**
