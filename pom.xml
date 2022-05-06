@@ -25,6 +25,19 @@
                 <configuration>
                     <source>12</source>
                     <target>12</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArgs>
+                        <!-- Configure manifold plugin-->
+                        <arg>-Xplugin:Manifold</arg>
+                    </compilerArgs>
+                    <!-- Add the processor path for the plugin -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>systems.manifold</groupId>
+                            <artifactId>manifold</artifactId>
+                            <version>2022.1.11</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>
@@ -78,7 +91,7 @@
         </dependency>
         <dependency>
             <groupId>systems.manifold</groupId>
-            <artifactId>manifold-ext-rt</artifactId>
+            <artifactId>manifold-rt</artifactId>
             <version>2022.1.11</version>
         </dependency>
         <dependency>

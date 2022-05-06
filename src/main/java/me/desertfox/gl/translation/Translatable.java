@@ -10,9 +10,13 @@ public class Translatable {
     private String message;
     public boolean includePrefix = false;
     public Enum<?> languageKey = Translator.defaultLocale;
-    public Enum<?> messageKey;
+    public String messageKey;
 
     public Translatable(Enum<?> messageKey) {
+        this.messageKey = messageKey.toString();
+    }
+
+    public Translatable(String messageKey) {
         this.messageKey = messageKey;
     }
 
@@ -21,6 +25,15 @@ public class Translatable {
      * @param messageKey
      */
     public Translatable(Enum<?> languageKey, Enum<?> messageKey) {
+        this.languageKey = languageKey;
+        this.messageKey = messageKey.toString();
+    }
+
+    /**
+     * @param languageKey {@link DefaultLocales} can be used
+     * @param messageKey
+     */
+    public Translatable(Enum<?> languageKey, String messageKey) {
         this.languageKey = languageKey;
         this.messageKey = messageKey;
     }
