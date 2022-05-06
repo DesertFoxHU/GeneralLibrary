@@ -20,7 +20,35 @@ public class PlayerExtensions {
    */
   @Deprecated
   public static void sendTranslatedMessage(@This Player player, Translatable message){
-    player.sendMessage(message.finish());
+    player.sendMessage(message.useLangReference(player.getName()).finish());
+  }
+
+  public static void sendRawTranslation(@This Player player, Translatable message){
+    player.sendMessage(message.useLangReference(player.getName()).finish());
+  }
+
+  public static void sendTranslation(@This Player player, Enum<?> messageKey){
+    player.sendMessage(new Translatable(messageKey).useLangReference(player.getName()).fetchMessage().finish());
+  }
+
+  public static void sendTranslation(@This Player player, Enum<?> languageKey, Enum<?> messageKey){
+    player.sendMessage(new Translatable(languageKey, messageKey).useLangReference(player.getName()).fetchMessage().finish());
+  }
+
+  public static void sendTranslation(@This Player player, String messageKey, boolean includePrefix){
+    player.sendMessage(new Translatable(messageKey).useLangReference(player.getName()).fetchMessage().includePrefix(includePrefix).finish());
+  }
+
+  public static void sendTranslation(@This Player player, Enum<?> messageKey, boolean includePrefix){
+    player.sendMessage(new Translatable(messageKey).useLangReference(player.getName()).fetchMessage().includePrefix(includePrefix).finish());
+  }
+
+  public static void sendTranslation(@This Player player, Enum<?> languageKey, Enum<?> messageKey, boolean includePrefix){
+    player.sendMessage(new Translatable(languageKey, messageKey).useLangReference(player.getName()).fetchMessage().includePrefix(includePrefix).finish());
+  }
+
+  public static void sendTranslation(@This Player player, Enum<?> languageKey, String messageKey, boolean includePrefix){
+    player.sendMessage(new Translatable(languageKey, messageKey).useLangReference(player.getName()).fetchMessage().includePrefix(includePrefix).finish());
   }
 
 }

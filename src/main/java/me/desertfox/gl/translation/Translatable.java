@@ -1,7 +1,9 @@
 package me.desertfox.gl.translation;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
 
 import java.util.Objects;
 
@@ -39,7 +41,7 @@ public class Translatable {
     }
 
     /**
-     * Prefix can be changed in {@link Translator#prefix}
+     * Prefix can be changed with {@link Translator#prefix}
      * @param includePrefix
      * @return
      */
@@ -48,6 +50,30 @@ public class Translatable {
         return this;
     }
 
+    /**
+     * Call this before {@link Translatable#fetchMessage()}
+     * @param playerName
+     * @return
+     */
+    public Translatable useLangReference(String playerName){
+        if(Translator.langPreference == null){
+            Bukkit.getLogger().info("§cNULL: Translator.langPreference is null");
+            return this;
+        }
+
+        if(!Translator.langPreference.containsKey(playerName)){
+            return this;
+        }
+
+        languageKey = Translator.langPreference.get(playerName);
+        return this;
+    }
+
+    /**
+     * Searches a message with the provided language and messageKey<br>
+     * Changing the {@link Translatable#languageKey} or {@link Translatable#messageKey} after this will do nothing
+     * @return
+     */
     public Translatable fetchMessage(){
         Objects.requireNonNull(Translator.localeProvider, "§cNULL: Translator.Init have never been called!");
         if(Translator.getTranslationSource(languageKey) == null){
@@ -57,7 +83,7 @@ public class Translatable {
         }
 
         YamlConfiguration yaml = Translator.getTranslationSource(languageKey).source;
-        message = yaml.getString(messageKey.toString(), null);
+        message = yaml.getString(messageKey, null);
         if(message == null){
             Bukkit.getLogger().info("§eWARN: This language source's doesn't contains this message type: " + messageKey + " languageKey: " + languageKey);
             message = "NOT_DEFINED";
@@ -66,5 +92,8 @@ public class Translatable {
         return this;
     }
 
-    public String finish() { return includePrefix ? Translator.prefix + message : message; }
+    public String finish() {
+        String finalMessage = includePrefix ? Translator.prefix + message : message;
+        return ChatColor.translateAlternateColorCodes('&', finalMessage);
+    }
 }
