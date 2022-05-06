@@ -91,7 +91,7 @@
         </dependency>
         <dependency>
             <groupId>systems.manifold</groupId>
-            <artifactId>manifold-rt</artifactId>
+            <artifactId>manifold-ext-rt</artifactId>
             <version>2022.1.11</version>
         </dependency>
         <dependency>

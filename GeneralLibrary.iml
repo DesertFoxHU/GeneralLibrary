@@ -33,6 +33,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.md-5:bungeecord-chat:1.16-R0.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.yaml:snakeyaml:1.28" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains:annotations:23.0.0" level="project" />
+    <orderEntry type="library" name="Maven: systems.manifold:manifold-ext-rt:2022.1.11" level="project" />
     <orderEntry type="library" name="Maven: systems.manifold:manifold-rt:2022.1.11" level="project" />
     <orderEntry type="library" name="Maven: systems.manifold:manifold-util:2022.1.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:7.5" level="project" />
