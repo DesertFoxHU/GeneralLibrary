@@ -14,7 +14,7 @@ public class InventoryUtils {
      * @param inventory
      * @param fillerItem
      */
-    public static void fillCorners(Inventory inventory, ItemStack fillerItem){
+    public static void fillEdges(Inventory inventory, ItemStack fillerItem){
         int numberOfRows = inventory.getSize()/9;
         for(int i = 0; i < numberOfRows; i++){
             inventory.setItem(i * 9, fillerItem);

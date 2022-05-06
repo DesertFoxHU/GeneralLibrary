@@ -13,7 +13,7 @@ public class InventoryExtensions {
    * @param inventory
    * @param fillerItem
    */
-  public static void fillCorners(@This Inventory inventory, ItemStack fillerItem){
+  public static void fillEdges(@This Inventory inventory, ItemStack fillerItem){
     int numberOfRows = inventory.getSize()/9;
     for(int i = 0; i < numberOfRows; i++){
       inventory.setItem(i * 9, fillerItem);
