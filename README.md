@@ -15,3 +15,7 @@ The library contains the following features:<br>
 ## Translation
 
 Example can be found in `TranslationTest.java`<br>
+
+## Suggestion: Manifold
+
+Use manifold to be able to use the extension methods (InventoryExtensions, LocationExtensions), see: [Manifold](http://manifold.systems/)
