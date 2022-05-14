@@ -9,7 +9,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_12">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_16">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -32,9 +32,11 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.code.gson:gson:2.8.8" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.md-5:bungeecord-chat:1.16-R0.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.yaml:snakeyaml:1.28" level="project" />
-    <orderEntry type="library" name="Maven: systems.manifold:manifold-ext-rt:2022.1.11" level="project" />
+    <orderEntry type="library" name="Maven: systems.manifold:manifold-ext:2022.1.11" level="project" />
+    <orderEntry type="library" name="Maven: systems.manifold:manifold:2022.1.11" level="project" />
     <orderEntry type="library" name="Maven: systems.manifold:manifold-rt:2022.1.11" level="project" />
     <orderEntry type="library" name="Maven: systems.manifold:manifold-util:2022.1.11" level="project" />
+    <orderEntry type="library" name="Maven: systems.manifold:manifold-ext-rt:2022.1.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:7.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.code.findbugs:jsr305:3.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-api:1.7.32" level="project" />

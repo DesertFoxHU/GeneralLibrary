@@ -12,13 +12,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/systems/manifold/manifold-all/2022.1.11/manifold-all-2022.1.11.jar" />
+          <entry name="$MAVEN_REPOSITORY$/systems/manifold/manifold/2022.1.11/manifold-2022.1.11.jar" />
+          <entry name="$MAVEN_REPOSITORY$/systems/manifold/manifold-rt/2022.1.11/manifold-rt-2022.1.11.jar" />
+          <entry name="$MAVEN_REPOSITORY$/systems/manifold/manifold-util/2022.1.11/manifold-util-2022.1.11.jar" />
         </processorPath>
         <module name="GeneralLibrary" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="GeneralLibrary" target="12" />
+      <module name="GeneralLibrary" target="16" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

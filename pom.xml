@@ -37,8 +37,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>12</source>
-                    <target>12</target>
+                    <source>16</source>
+                    <target>16</target>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
                         <!-- Configure manifold plugin-->
@@ -48,7 +48,7 @@
                     <annotationProcessorPaths>
                         <path>
                             <groupId>systems.manifold</groupId>
-                            <artifactId>manifold-all</artifactId>
+                            <artifactId>manifold</artifactId>
                             <version>2022.1.11</version>
                         </path>
                     </annotationProcessorPaths>
@@ -99,7 +99,7 @@
         </dependency>
         <dependency>
             <groupId>systems.manifold</groupId>
-            <artifactId>manifold-ext-rt</artifactId>
+            <artifactId>manifold-ext</artifactId>
             <version>2022.1.11</version>
         </dependency>
         <dependency>
