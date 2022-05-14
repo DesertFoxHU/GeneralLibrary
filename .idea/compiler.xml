@@ -20,7 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="GeneralLibrary" target="16" />
+      <module name="GeneralLibrary" target="12" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
