@@ -48,7 +48,7 @@
                     <annotationProcessorPaths>
                         <path>
                             <groupId>systems.manifold</groupId>
-                            <artifactId>manifold</artifactId>
+                            <artifactId>manifold-all</artifactId>
                             <version>2022.1.11</version>
                         </path>
                     </annotationProcessorPaths>
@@ -96,12 +96,6 @@
             <artifactId>spigot-api</artifactId>
             <version>1.18-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>systems.manifold</groupId>
