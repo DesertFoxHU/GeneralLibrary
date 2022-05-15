@@ -2,7 +2,6 @@ import me.desertfox.gl.translation.DefaultLocales;
 import me.desertfox.gl.translation.Translatable;
 import me.desertfox.gl.translation.TranslationSource;
 import me.desertfox.gl.translation.Translator;
-import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.testng.annotations.Test;
 
