@@ -56,16 +56,16 @@ public class Translatable {
      * @return
      */
     public Translatable useLangReference(String playerName){
-        if(Translator.langPreference == null){
+        if(Translator.getLangPreference() == null){
             Bukkit.getLogger().info("§cNULL: Translator.langPreference is null");
             return this;
         }
 
-        if(!Translator.langPreference.containsKey(playerName)){
+        if(!Translator.getLangPreference().containsKey(playerName)){
             return this;
         }
 
-        languageKey = Translator.langPreference.get(playerName);
+        languageKey = Translator.getLangPreference().get(playerName);
         return this;
     }
 

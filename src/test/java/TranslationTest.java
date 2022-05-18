@@ -50,7 +50,7 @@ public class TranslationTest {
         HashMap<String, Enum<?>> langPreference = new HashMap<>();
         langPreference.put("TestPlayerName", DefaultLocales.ENG);
 
-        Translator.Init(sources, DefaultLocales.ENG, langPreference);
+        Translator.Init(sources, DefaultLocales.ENG, null, langPreference);
         //INIT END
 
         //Bukkit.getPlayer("TestPlayerName").sendMessage(new Translatable(Messages.WELCOME_MESSAGE).useLangReference("TestPlayerName").fetchMessage().finish());

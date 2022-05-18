@@ -1,5 +1,7 @@
 package me.desertfox.gl.translation;
 
+import me.desertfox.gl.events.PlayerLanguageChangeEvent;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.util.HashMap;
@@ -14,7 +16,7 @@ public class Translator {
      * Key: PlayerName<br>
      * Value: LanguageKey
      */
-    public static HashMap<String, Enum<?>> langPreference = new HashMap<>();
+    private static HashMap<String, Enum<?>> langPreference = new HashMap<>();
 
     /**
      * Enum should contain language names like:<br>
@@ -38,40 +40,33 @@ public class Translator {
      * etc.
      * @param localeProvider
      */
-    public static void Init(List<TranslationSource<?>> localeProvider, Enum<?> defaultLocale){
-        Translator.localeProvider = localeProvider;
-        Translator.defaultLocale = defaultLocale;
-    }
-
-    /**
-     * Enum should contain language names like:<br>
-     * - EN<br>
-     * - HU<br>
-     * - RO<br>
-     * - EGY<br>
-     * etc.
-     * @param localeProvider
-     */
-    public static void Init(List<TranslationSource<?>> localeProvider, Enum<?> defaultLocale, HashMap<String, Enum<?>> langPreference){
-        Translator.localeProvider = localeProvider;
-        Translator.defaultLocale = defaultLocale;
-        Translator.langPreference = langPreference;
-    }
-
-    /**
-     * Enum should contain language names like:<br>
-     * - EN<br>
-     * - HU<br>
-     * - RO<br>
-     * - EGY<br>
-     * etc.
-     * @param localeProvider
-     */
     public static void Init(List<TranslationSource<?>> localeProvider, Enum<?> defaultLocale, String prefix, HashMap<String, Enum<?>> langPreference){
         Translator.localeProvider = localeProvider;
         Translator.defaultLocale = defaultLocale;
         Translator.prefix = prefix;
         Translator.langPreference = langPreference;
+    }
+
+    public static HashMap<String, Enum<?>> getLangPreference() { return langPreference; }
+
+    public static void setLangPreference(HashMap<String, Enum<?>> langPreference){
+        Translator.langPreference = langPreference;
+    }
+
+    public static void setPlayerLangPreference(String playerName, Enum<?> lang){
+        PlayerLanguageChangeEvent event = new PlayerLanguageChangeEvent(playerName, langPreference.getOrDefault(playerName, defaultLocale), lang);
+        Bukkit.getPluginManager().callEvent(event);
+
+        if(event.isCancelled) return;
+
+        lang = event.getNewLanguage();
+
+        if(langPreference.containsKey(playerName)){
+            langPreference.replace(playerName, lang);
+        }
+        else {
+            langPreference.put(playerName, lang);
+        }
     }
 
     /**
