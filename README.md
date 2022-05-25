@@ -66,8 +66,8 @@ public class Interact implements Listener {
 }
 ```
 
-**Keep in mind a player only can have one TimedAction**
-So if you add an another with `startAction` the old one will be cancelled.
+**Keep in mind a player only can have one TimedAction**<br>
+So if you add an another with `startAction` the old one will be cancelled.<br>
 Because of this you should make an event for ItemChange and cancel any going Action with `cancelAction(Player player)`
 
 ## Translation
