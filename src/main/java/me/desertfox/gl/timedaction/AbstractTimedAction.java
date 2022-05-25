@@ -55,6 +55,6 @@ public abstract class AbstractTimedAction {
         //Do nothing
     }
 
-    abstract void onCompleted(Player player);
+    public abstract void onCompleted(Player player);
 
 }
