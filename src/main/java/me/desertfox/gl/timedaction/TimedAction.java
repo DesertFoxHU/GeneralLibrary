@@ -25,7 +25,6 @@ public class TimedAction {
                     Player player = playerIterator.next();
                     ActionData<Double, Double, AbstractTimedAction> data = actions.get(player);
 
-                    data.t -= 0.1;
                     if(data.t <= 0){
                         data.u.onCompleted(player);
                         playerIterator.remove();
@@ -33,6 +32,8 @@ public class TimedAction {
                     else {
                         data.u.onTick(player, data.t, data.s);
                     }
+
+                    data.t -= 0.1;
                 }
 
             }
