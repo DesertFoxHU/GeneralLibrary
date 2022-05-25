@@ -14,7 +14,11 @@ The library contains the following features:<br>
 
 ## Timed Actions
 
-First you need to initialize to use this feature, like:
+![timedaction](https://user-images.githubusercontent.com/40893862/170261215-834a868f-7a8d-48ea-9038-e54796bbcd7d.png)
+
+You can make cancellable countdown timers on a player's actionbar.
+
+First you need to initialize to use this feature:
 ```java
 import me.desertfox.gl.timedaction.TimedAction;
 
@@ -24,6 +28,47 @@ public class Main extends JavaPlugin {
   }
 }
 ```
+
+You need to extend `AbstractTimedAction`, which controls the logic of an action.
+```java
+public class TestAction extends AbstractTimedAction {
+
+    @Override
+    public void onCompleted(Player player){
+        player.sendMessage("Completed!!");
+    }
+    
+    //You can override a lot of thing, you can even change the basic color codes.
+    @Override
+    public void onTick(Player player, double remainingTime, double startDuration) {
+        super.onTick(player, remainingTime, startDuration);
+    }
+    
+    @Override
+    public void onStart(Player player) {
+        this.BRACKET_COLOR = "§8";
+        this.TIME_COLOR = "§4";
+    }
+
+}
+```
+
+There is a sample to starting an action:
+```java
+public class Interact implements Listener {
+
+    @EventHandler
+    public void onInteract(PlayerInteractEvent e){
+        if(e.getItem().getType() != Material.DIAMOND) return;
+
+        TimedAction.startAction(e.getPlayer(), new TestAction(), 30);
+    }
+}
+```
+
+**Keep in mind a player only can have one TimedAction**
+So if you add an another with `startAction` the old one will be cancelled.
+Because of this you should make an event for ItemChange and cancel any going Action with `cancelAction(Player player)`
 
 ## Translation
 
