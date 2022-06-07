@@ -11,6 +11,7 @@ The library contains the following features:<br>
 - Serializator
 - Inventory utilities (filling empty slots with items)
 - Simple translation (doesn't support placeholders yet)
+- ItemBuilder
 
 ## Timed Actions
 
