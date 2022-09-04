@@ -12,7 +12,7 @@
     <name>GeneralLibrary</name>
 
     <properties>
-        <manifold.version>2022.1.18</manifold.version>
+        <manifold.version>2022.1.19</manifold.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

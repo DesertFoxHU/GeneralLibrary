@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: systems.manifold:manifold-util:2022.1.19">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/systems/manifold/manifold-util/2022.1.19/manifold-util-2022.1.19.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/systems/manifold/manifold-util/2022.1.19/manifold-util-2022.1.19-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/systems/manifold/manifold-util/2022.1.19/manifold-util-2022.1.19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

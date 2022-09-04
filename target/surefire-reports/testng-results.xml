@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-27T20:57:27 CEST" name="TranslationTest" finished-at="2022-07-27T20:57:27 CEST" duration-ms="167">
+  <suite started-at="2022-09-04T16:19:10 CEST" name="TranslationTest" finished-at="2022-09-04T16:19:10 CEST" duration-ms="166">
     <groups>
     </groups>
-    <test started-at="2022-07-27T20:57:27 CEST" name="Command line test" finished-at="2022-07-27T20:57:27 CEST" duration-ms="167">
+    <test started-at="2022-09-04T16:19:10 CEST" name="Command line test" finished-at="2022-09-04T16:19:10 CEST" duration-ms="166">
       <class name="TranslationTest">
-        <test-method signature="preferenceTest()[pri:0, instance:TranslationTest@2d127a61]" started-at="2022-07-27T20:57:27 CEST" name="preferenceTest" finished-at="2022-07-27T20:57:27 CEST" duration-ms="73" status="PASS">
+        <test-method signature="preferenceTest()[pri:0, instance:TranslationTest@2d127a61]" started-at="2022-09-04T16:19:10 CEST" name="preferenceTest" finished-at="2022-09-04T16:19:10 CEST" duration-ms="75" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preferenceTest -->
-        <test-method signature="test()[pri:0, instance:TranslationTest@2d127a61]" started-at="2022-07-27T20:57:27 CEST" name="test" finished-at="2022-07-27T20:57:27 CEST" duration-ms="25" status="PASS">
+        <test-method signature="test()[pri:0, instance:TranslationTest@2d127a61]" started-at="2022-09-04T16:19:10 CEST" name="test" finished-at="2022-09-04T16:19:10 CEST" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
