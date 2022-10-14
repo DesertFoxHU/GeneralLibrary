@@ -12,6 +12,12 @@ The library contains the following features:<br>
 - Inventory utilities (filling empty slots with items)
 - Simple translation (doesn't support placeholders yet)
 - ItemBuilder
+- Invitation System
+
+## Invitation System
+The system is already included, but it's under testing.
+Documentation will be avaible after it's polished.
+See: `me.desertfox.gl.invitation` package
 
 ## Timed Actions
 
