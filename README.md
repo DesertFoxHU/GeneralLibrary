@@ -15,8 +15,8 @@ The library contains the following features:<br>
 - Invitation System
 
 ## Invitation System
-The system is already included, but it's under testing.
-Documentation will be avaible after it's polished.
+The system is already included, but it's under testing.<br>
+Documentation will be avaible after it's polished.<br>
 See: `me.desertfox.gl.invitation` package
 
 ## Timed Actions
