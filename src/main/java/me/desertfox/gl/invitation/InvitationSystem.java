@@ -19,10 +19,15 @@ import java.util.List;
 public class InvitationSystem {
 
     private static JavaPlugin plugin = null;
-    public static boolean isStarted = false;
+    private static boolean started = false;
     private static List<AbstractInvitation> requests = new ArrayList<>();
 
     public static void start(JavaPlugin plugin){
+        if(started){
+            plugin.getLogger().info("§cInvitation System has been already started!");
+            return;
+        }
+
         InvitationSystem.plugin = plugin;
         new BukkitRunnable(){
             @Override
@@ -38,11 +43,11 @@ public class InvitationSystem {
                 }
             }
         }.runTaskTimer(plugin, 0, 10);
-        isStarted = true;
+        started = true;
     }
 
     public static void sendInviteRequest(AbstractInvitation handler){
-        if(!isStarted){
+        if(!started){
             plugin.getLogger().info("§4InvitationSystem was not initialized, but this plugin tried to use it's functions.");
             return;
         }
@@ -62,4 +67,8 @@ public class InvitationSystem {
     }
 
     public static List<AbstractInvitation> getRequests() {return new ArrayList<>(requests);}
+
+    public static boolean isStarted() {
+        return started;
+    }
 }

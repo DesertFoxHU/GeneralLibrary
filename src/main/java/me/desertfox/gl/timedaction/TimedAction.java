@@ -12,9 +12,15 @@ import java.util.Iterator;
  */
 public class TimedAction {
 
+    private static boolean started = false;
     private static HashMap<Player, ActionData<Double, Double, AbstractTimedAction>> actions = new HashMap<>();
 
     public static void init(JavaPlugin plugin){
+        if(started){
+            plugin.getLogger().info("§cTimedAction has been already started!");
+            return;
+        }
+
         new BukkitRunnable(){
 
             @Override
@@ -38,6 +44,7 @@ public class TimedAction {
             }
 
         }.runTaskTimer(plugin, 0, 2 /*0.1 sec*/);
+        started = true;
     }
 
     /**
@@ -64,4 +71,7 @@ public class TimedAction {
         actions.remove(player);
     }
 
+    public static boolean isStarted() {
+        return started;
+    }
 }
