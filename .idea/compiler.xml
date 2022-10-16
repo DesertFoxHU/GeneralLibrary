@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="GeneralLibrary-v1_19_R1" />
       </profile>
       <profile name="Annotation profile for GeneralLibrary" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -16,17 +17,21 @@
           <entry name="$MAVEN_REPOSITORY$/systems/manifold/manifold-rt/2022.1.19/manifold-rt-2022.1.19.jar" />
           <entry name="$MAVEN_REPOSITORY$/systems/manifold/manifold-util/2022.1.19/manifold-util-2022.1.19.jar" />
         </processorPath>
-        <module name="GeneralLibrary" />
+        <module name="GeneralLibrary-main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="GeneralLibrary" target="17" />
+      <module name="GeneralLibrary" target="1.5" />
+      <module name="GeneralLibrary-main" target="17" />
+      <module name="GeneralLibrary-v1_19_R1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-Xplugin:Manifold " />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="GeneralLibrary" options="-Xplugin:Manifold" />
+      <module name="GeneralLibrary-main" options="-Xplugin:Manifold" />
+      <module name="GeneralLibrary-v1_19_R1" options="" />
     </option>
   </component>
 </project>
