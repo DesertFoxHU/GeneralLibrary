@@ -13,11 +13,46 @@ The library contains the following features:<br>
 - Simple translation (doesn't support placeholders yet)
 - ItemBuilder
 - Invitation System
+- Small Custom Block Framework
+
+
+**About the library:**<br>
+
+As the name suggest, the library contains basic things.<br>
+The library was not made for complex systems, such as a full custom block framework, but this will change.<br>
+
+Currently the library has a wide version range compatibility, due it's not using any specified NMS code.<br>
+In the future the library most up-to-date features will only support the current minecraft version.<br>
+If you need any other version you will need to do it yourself, you can freely fork this and make changes.<br>
+
+# Installation
+<details>
+<summary>Maven</summary>
+
+pom.xml:
+```xml
+<properties>
+  <general.library>VERSION_NUMBER</general.library>
+</properties>
+
+<dependencies>
+  <dependency>
+    <groupId>com.github.DesertFoxHU</groupId>
+    <artifactId>GeneralLibrary</artifactId>
+    <version>${general.library}</version>
+  </dependency>
+</dependencies>
+```
+</details>
 
 ## Invitation System
 The system is already included, but it's under testing.<br>
 Documentation will be avaible after it's polished.<br>
 See: `me.desertfox.gl.invitation` package
+
+## Custom Block Framework
+(Probably should not be called a framework)<br>
+See: `me.desertfox.gl.custom.blocks` package<br>
 
 ## Timed Actions
 
@@ -80,23 +115,6 @@ Because of this you should make an event for ItemChange and cancel any going Act
 ## Translation
 
 Example can be found in `TranslationTest.java`<br>
-
-## Maven
-
-pom.xml:
-```xml
-<properties>
-  <general.library>VERSION_NUMBER</general.library>
-</properties>
-
-<dependencies>
-  <dependency>
-    <groupId>com.github.DesertFoxHU</groupId>
-    <artifactId>GeneralLibrary</artifactId>
-    <version>${general.library}</version>
-  </dependency>
-</dependencies>
-```
 
 ## Suggestion: Manifold
 
