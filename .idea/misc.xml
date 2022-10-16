@@ -9,7 +9,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/GeneralLibrary-v1_19_R1/pom.xml" />
         <option value="$PROJECT_DIR$/GeneralLibrary-main/pom.xml" />
       </list>
     </option>
