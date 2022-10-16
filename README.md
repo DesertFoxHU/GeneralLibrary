@@ -54,8 +54,6 @@ See: `me.desertfox.gl.invitation` package
 (Probably should not be called a framework)<br>
 See: `me.desertfox.gl.custom.blocks` package<br>
 
-So 
-
 ## Timed Actions
 
 ![timedaction](https://user-images.githubusercontent.com/40893862/170261215-834a868f-7a8d-48ea-9038-e54796bbcd7d.png)
