@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GeneralLibrary.iml" filepath="$PROJECT_DIR$/GeneralLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GeneralLibrary-main/GeneralLibrary-v1_19_R0.iml" filepath="$PROJECT_DIR$/GeneralLibrary-main/GeneralLibrary-v1_19_R0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GeneralLibrary-v1_19_R0/GeneralLibrary-v1_19_R0.iml" filepath="$PROJECT_DIR$/GeneralLibrary-v1_19_R0/GeneralLibrary-v1_19_R0.iml" />
     </modules>
   </component>
 </project>
