@@ -74,7 +74,7 @@ public class LocationUtils {
         double Y = Double.parseDouble(splitted[1]);
         double Z = Double.parseDouble(splitted[2]);
         if(splitted.length > 3) {
-            float yaw = Float.parseFloat(splitted[5]);
+            float yaw = Float.parseFloat(splitted[3]);
             float pitch = Float.parseFloat(splitted[4]);
             return new Location(world, X, Y, Z, yaw, pitch);
         }
