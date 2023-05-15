@@ -119,3 +119,10 @@ Example can be found in `TranslationTest.java`<br>
 ## Suggestion: Manifold
 
 Use manifold to be able to use the extension methods (InventoryExtensions, LocationExtensions), see: [Manifold](http://manifold.systems/)
+
+## Future plans
+
+* Support NMS things (NBTs) with multiple versions
+* Better location save,load options (LocationUtils)
+* LockPick system
+* Submodule systems
