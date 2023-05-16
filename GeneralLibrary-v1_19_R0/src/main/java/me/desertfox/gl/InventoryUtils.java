@@ -1,9 +1,13 @@
 package me.desertfox.gl;
 
+import manifold.ext.rt.api.This;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import GeneralLibrary.extensions.org.bukkit.Inventory.InventoryExtensions;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * If you have Manifold you can also use<br>
@@ -34,8 +38,10 @@ public class InventoryUtils {
      * @param inventory
      * @param fillerItem
      */
-    public static void fillEmptySlots(Inventory inventory, ItemStack fillerItem){
+    public static void fillEmptySlots(Inventory inventory, ItemStack fillerItem, int... except){
+        List<Integer> exceptions = Arrays.stream(except).boxed().toList();
         for(int i = 0; i < inventory.getSize(); i++){
+            if(exceptions.contains(i)) continue;
             if(inventory.getItem(i) == null) inventory.setItem(i, fillerItem);
         }
     }

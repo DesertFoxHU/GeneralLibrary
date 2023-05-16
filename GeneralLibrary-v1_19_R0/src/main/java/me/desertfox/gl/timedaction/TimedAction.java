@@ -1,5 +1,6 @@
 package me.desertfox.gl.timedaction;
 
+import jline.internal.Nullable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -62,6 +63,12 @@ public class TimedAction {
         ActionData<Double, Double, AbstractTimedAction> data = new ActionData<>(duration /*timer*/, duration, action);
         action.onStart(player);
         actions.put(player, data);
+    }
+
+    public static @Nullable AbstractTimedAction hasTimedAction(Player player){
+        if(!actions.containsKey(player)) return null;
+
+        return actions.get(player).u;
     }
 
     @Deprecated
