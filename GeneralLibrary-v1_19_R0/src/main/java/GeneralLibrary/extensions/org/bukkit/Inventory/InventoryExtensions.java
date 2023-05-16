@@ -5,6 +5,11 @@ import manifold.ext.rt.api.This;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Extension
 public class InventoryExtensions {
 
@@ -31,8 +36,10 @@ public class InventoryExtensions {
    * @param inventory
    * @param fillerItem
    */
-  public static void fillEmptySlots(@This Inventory inventory, ItemStack fillerItem){
+  public static void fillEmptySlots(@This Inventory inventory, ItemStack fillerItem, int... except){
+    List<Integer> exceptions = Arrays.stream(except).boxed().toList();
     for(int i = 0; i < inventory.getSize(); i++){
+      if(exceptions.contains(i)) continue;
       if(inventory.getItem(i) == null) inventory.setItem(i, fillerItem);
     }
   }

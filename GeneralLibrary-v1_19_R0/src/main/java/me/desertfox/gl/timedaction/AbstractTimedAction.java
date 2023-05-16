@@ -4,6 +4,9 @@ import me.desertfox.gl.Formatter;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
+
+import java.util.List;
 
 public abstract class AbstractTimedAction {
 
@@ -36,6 +39,8 @@ public abstract class AbstractTimedAction {
 
         player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(formatTime));
     }
+
+    public abstract List<Class<? extends Event>> cancelOnEvents();
 
     /**
      * Called every 0.1 sec

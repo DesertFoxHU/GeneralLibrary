@@ -1,6 +1,7 @@
 package me.desertfox.gl.timedaction;
 
 import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -8,7 +9,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 /**
- * Call {@link TimedAction#init(JavaPlugin)} for initialize
+ * Call {@link TimedAction#init(JavaPlugin)} to initialize
  */
 public class TimedAction {
 
@@ -63,10 +64,26 @@ public class TimedAction {
         actions.put(player, data);
     }
 
+    @Deprecated
     public static void cancelAction(Player player){
         if(!actions.containsKey(player)) return;
 
         ActionData<Double, Double, AbstractTimedAction> data = actions.get(player);
+        data.u.onCancelled(player);
+        actions.remove(player);
+    }
+
+    /**
+     *
+     * @param player
+     * @param event
+     */
+    public static void cancelAction(Player player, Class<? extends Event> event){
+        if(!actions.containsKey(player)) return;
+
+        ActionData<Double, Double, AbstractTimedAction> data = actions.get(player);
+        if(!data.u.cancelOnEvents().contains(event)) return;
+
         data.u.onCancelled(player);
         actions.remove(player);
     }

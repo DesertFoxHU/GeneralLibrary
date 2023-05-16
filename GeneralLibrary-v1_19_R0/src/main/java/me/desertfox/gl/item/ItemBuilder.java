@@ -12,6 +12,8 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.*;
+import org.bukkit.potion.Potion;
+import org.bukkit.potion.PotionEffect;
 import org.bukkit.profile.PlayerProfile;
 
 import java.util.Arrays;
@@ -29,7 +31,6 @@ import java.util.Map;
  * - CrossbowMeta
  * - FireworkEffectMeta
  * - MapMeta
- * - PotionMeta
  * - SpawnEggMeta
  * - SuspuciousStewMeta
  * - TropicalFishBucketMeta
@@ -146,6 +147,23 @@ public class ItemBuilder {
         ((Repairable)meta).setRepairCost(repairCost);
         return this;
     }
+
+    //POTIONMETA
+    public ItemBuilder setPotionColor(Color color){
+        ((PotionMeta)meta).setColor(color);
+        return this;
+    }
+
+    public ItemBuilder addPotionEffect(PotionEffect effect, boolean overwrite){
+        ((PotionMeta)meta).addCustomEffect(effect, overwrite);
+        return this;
+    }
+
+    public ItemBuilder clearEffects(){
+        ((PotionMeta)meta).clearCustomEffects();
+        return this;
+    }
+    //END POTIONMETA
 
     public ItemStack build(){
         item.setItemMeta(meta);
