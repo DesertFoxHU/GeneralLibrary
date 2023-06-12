@@ -1,7 +1,7 @@
 package me.desertfox.gl.region;
 
-import me.desertfox.gl.response.Response;
-import me.desertfox.gl.response.ResponseType;
+import me.desertfox.gl.region.response.Response;
+import me.desertfox.gl.region.response.ResponseType;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
